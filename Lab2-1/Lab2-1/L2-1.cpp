@@ -1,38 +1,6 @@
 
 
 
-//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-//* Program name    : Rectangle Overloading, L2-1.ccp                   * 
-//*                                                                     * 
-//* Written by      : Peter Sivak                                       * 
-//*                                                                     * 
-//* Purpose         : Use Overloading to compare 2 rectanglesTypes      * 
-//*                                                                     * 
-//*                                                                     * 
-//* Inputs          : User enters 2 numbers for first and second rects. * 
-//*                                                                     * 
-//* Outputs         : Comparing 2 rectangleTypes with overloading       * 
-//*                                                                     * 
-//* Calls           : No internal or external calls, other than system  * 
-//*                                                                     * 
-//* Structure       : BEGIN                                             * 
-//*                       User lunch program and got prompts to insert  *
-//*                       2 numbers for first and second rectangle.     *
-//*                                                                     *
-//*                   STOP                                              * 
-//*                       Program compare 2 rectangles and show results * 
-//*                                                                     * 
-//*                                                                     * 
-//*---------------------------------------------------------------------* 
-//* Change Log:                                                         * 
-//*                         Revision                                    * 
-//*       Date    Changed  Rel Ver Mod Purpose                          * 
-//*    10/2/22      psivak 000.000.000 Initial release of program       * 
-//*                                                                     * 
-//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-
-
 
 
 #include <iostream>
