@@ -1,3 +1,40 @@
+
+
+
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+//* Program name    : Rectangle Overloading, L2-1.ccp                   * 
+//*                                                                     * 
+//* Written by      : Peter Sivak                                       * 
+//*                                                                     * 
+//* Purpose         : Use Overloading to compare 2 rectanglesTypes      * 
+//*                                                                     * 
+//*                                                                     * 
+//* Inputs          : User enters 2 numbers for first and second rects. * 
+//*                                                                     * 
+//* Outputs         : Comparing 2 rectangleTypes with overloading       * 
+//*                                                                     * 
+//* Calls           : No internal or external calls, other than system  * 
+//*                                                                     * 
+//* Structure       : BEGIN                                             * 
+//*                       User lunch program and got prompts to insert  *
+//*                       2 numbers for first and second rectangle.     *
+//*                                                                     *
+//*                   STOP                                              * 
+//*                       Program compare 2 rectangles and show results * 
+//*                                                                     * 
+//*                                                                     * 
+//*---------------------------------------------------------------------* 
+//* Change Log:                                                         * 
+//*                         Revision                                    * 
+//*       Date    Changed  Rel Ver Mod Purpose                          * 
+//*    10/2/22      psivak 000.000.000 Initial release of program       * 
+//*                                                                     * 
+//* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+
+
+
 #include <iostream>
 #include "rectangleType.h"
 
@@ -35,6 +72,7 @@ rectangleType rectangleType::operator + (const rectangleType& other) const {
     return rectangleType(length + other.length, width + other.width);
 }
 
+
 rectangleType rectangleType::operator - (const rectangleType& other) const {
     double newLength = length - other.length;
     double newWidth = width - other.width;
@@ -52,12 +90,14 @@ rectangleType rectangleType::operator * (const rectangleType& other) const {
     return rectangleType(length * other.length, width * other.width);
 }
 
+// pre increment non member func
 rectangleType rectangleType::operator ++ () {
     ++length;
     ++width;
     return *this;
 }
 
+// post increment with int 945 page
 rectangleType rectangleType::operator ++ (int) {
     rectangleType temp(*this);
     ++length;
@@ -114,7 +154,7 @@ bool rectangleType::operator > (const rectangleType& other) const {
 
 
 rectangleType::rectangleType() : length(0.0), width(0.0) {
-   
+    cout << "Peter Sivak, rectangleType.h " << endl;
 }
 
 
@@ -130,19 +170,21 @@ rectangleType::rectangleType(double l, double w) {
     }
 }
 
-// cout <<
+// cout << friend func
 ostream& operator<<(ostream& os, const rectangleType& rect) {
     os << "Length: " << rect.length << " Width: " << rect.width;
     return os;
 }
 
-// cin >>
+// cin >> friend func
 istream& operator>>(istream& is, rectangleType& rect) {
     double l, w;
     is >> l >> w;
     rect.setDimension(l, w);
     return is;
 }
+
+
 
 
 int main() {
