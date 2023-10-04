@@ -1,3 +1,4 @@
+
 #ifndef RECTANGLETYPE_H
 #define RECTANGLETYPE_H
 
@@ -6,6 +7,10 @@ using namespace std;
 
 
 class rectangleType {
+
+    friend ostream& operator<<(ostream&, const rectangleType&);
+    friend istream& operator>>(istream&, rectangleType&);
+
 protected:
     double length;
     double width;
@@ -37,8 +42,7 @@ public:
     rectangleType(double l, double w);
 
     
-    friend ostream& operator<<(ostream&, const rectangleType&);
-    friend istream& operator>>(istream&, rectangleType&);
+    
 };
 
 #endif 
